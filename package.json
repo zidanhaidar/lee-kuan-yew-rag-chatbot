@@ -13,6 +13,7 @@
     "retrieve": "tsx scripts/retrieve.ts"
   },
   "dependencies": {
+    "@ai-sdk/google": "^2.0.76",
     "@ai-sdk/react": "^2.0.0",
     "ai": "^5.0.0",
     "dotenv": "^16.4.0",

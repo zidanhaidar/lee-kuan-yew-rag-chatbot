@@ -1,6 +1,7 @@
 import { streamText } from "ai";
 import { retrieve } from "@/lib/retrieval";
 import { PERSONA_SYSTEM_PROMPT, buildContextMessage } from "@/lib/persona";
+import { getChatModel } from "@/lib/model";
 
 export const maxDuration = 60;
 
@@ -37,12 +38,13 @@ export async function POST(req: Request) {
   const sourcesHeader = Buffer.from(JSON.stringify(sources)).toString("base64");
 
   // --- No key: still return retrieved sources + a setup message ---------
-  if (!process.env.AI_GATEWAY_API_KEY) {
+  const model = getChatModel();
+  if (!model) {
     const setup =
       "⚠️ Retrieval is working (open “Sources” to see the grounded passages), " +
       "but the language model isn’t configured yet, so I can’t compose the spoken reply.\n\n" +
-      "Add an `AI_GATEWAY_API_KEY` to `.env.local` (see `.env.example`) and restart. " +
-      "Get a key at https://vercel.com/ai-gateway.";
+      "Set `GOOGLE_GENERATIVE_AI_API_KEY` (Google AI Studio) or `AI_GATEWAY_API_KEY` " +
+      "in `.env.local` and restart.";
     return new Response(setup, {
       headers: {
         "Content-Type": "text/plain; charset=utf-8",
@@ -61,7 +63,7 @@ export async function POST(req: Request) {
   }
 
   const result = streamText({
-    model: process.env.CHAT_MODEL ?? "anthropic/claude-sonnet-4-6",
+    model,
     system: PERSONA_SYSTEM_PROMPT,
     messages: modelMessages,
     temperature: 0.4,

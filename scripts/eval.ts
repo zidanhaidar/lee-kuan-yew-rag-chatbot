@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { retrieve } from "../lib/retrieval";
 import { PERSONA_SYSTEM_PROMPT, buildContextMessage } from "../lib/persona";
+import { getChatModel, hasGenerationKey } from "../lib/model";
 
 interface EvalQuestion {
   id: string;
@@ -15,8 +16,7 @@ interface EvalQuestion {
   type: "sourced" | "inference";
 }
 
-const CHAT_MODEL = process.env.CHAT_MODEL ?? "anthropic/claude-sonnet-4-6";
-const hasKey = Boolean(process.env.AI_GATEWAY_API_KEY);
+const hasKey = hasGenerationKey();
 
 const JUDGE_RUBRIC = `You are a strict evaluator of a chatbot that emulates Lee Kuan Yew using retrieval-augmented generation. You are given: the user QUESTION, the retrieved SOURCE PASSAGES, the model ANSWER, and the KNOWN LKY POSITION. Score the ANSWER 1-5 on each dimension:
 
@@ -32,7 +32,7 @@ async function generateAnswer(q: string) {
   const { generateText } = await import("ai");
   const chunks = await retrieve(q);
   const { text } = await generateText({
-    model: CHAT_MODEL,
+    model: getChatModel()!,
     system: PERSONA_SYSTEM_PROMPT,
     prompt: buildContextMessage(q, chunks),
   });
@@ -42,7 +42,7 @@ async function generateAnswer(q: string) {
 async function judge(q: EvalQuestion, answer: string, contextBlock: string) {
   const { generateText } = await import("ai");
   const { text } = await generateText({
-    model: CHAT_MODEL,
+    model: getChatModel()!,
     system: JUDGE_RUBRIC,
     prompt: `QUESTION: ${q.question}\n\nSOURCE PASSAGES:\n${contextBlock}\n\nANSWER:\n${answer}\n\nKNOWN LKY POSITION: ${q.known_position}`,
   });

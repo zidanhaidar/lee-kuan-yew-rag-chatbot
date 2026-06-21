@@ -1,6 +1,22 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState, type ReactNode } from "react";
+
+/**
+ * Minimal inline formatter: renders **bold** segments as actual bold text and
+ * preserves everything else verbatim. Works mid-stream — an unclosed `**` is
+ * left as literal text until its closing pair arrives.
+ */
+function renderInline(text: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    const match = /^\*\*([^*]+)\*\*$/.exec(part);
+    if (match) {
+      return <strong key={i}>{match[1]}</strong>;
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
+}
 
 interface Source {
   n: number;
@@ -146,7 +162,7 @@ export default function Chat() {
           <div key={m.id} className={`msg ${m.role}`}>
             <div className="role">{m.role === "user" ? "You" : "LKY (AI emulation)"}</div>
             <div className="bubble">
-              {m.content || (loading ? <span className="cursor">▋</span> : "")}
+              {m.content ? renderInline(m.content) : loading ? <span className="cursor">▋</span> : ""}
             </div>
             {showSources && m.role === "assistant" && m.sources && m.sources.length > 0 && (
               <details className="sources" open>

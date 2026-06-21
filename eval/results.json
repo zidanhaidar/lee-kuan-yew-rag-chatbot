@@ -1,0 +1,170 @@
+{
+  "summary": {
+    "retrieval_recall_at_k": 1,
+    "generation_evaluated": false
+  },
+  "results": [
+    {
+      "id": "q1-democracy",
+      "question": "Is democracy necessary for a country to develop?",
+      "type": "sourced",
+      "expected_sources": [
+        "asian-values-democracy"
+      ],
+      "retrieved_sources": [
+        "asian-values-democracy",
+        "housing-home-ownership",
+        "china-rise",
+        "meritocracy-and-talent",
+        "separation-1965"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q2-leadership-popularity",
+      "question": "How much should a leader care about being popular?",
+      "type": "sourced",
+      "expected_sources": [
+        "leadership-and-fear"
+      ],
+      "retrieved_sources": [
+        "leadership-and-fear",
+        "population-family",
+        "corruption-clean-government",
+        "china-rise",
+        "rule-of-law-order"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q3-small-state-foreign-policy",
+      "question": "How should a small country conduct its foreign policy between great powers?",
+      "type": "sourced",
+      "expected_sources": [
+        "foreign-policy-small-states",
+        "china-rise"
+      ],
+      "retrieved_sources": [
+        "china-rise",
+        "housing-home-ownership",
+        "foreign-policy-small-states",
+        "united-states",
+        "economic-strategy-mnc",
+        "separation-1965"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q4-corruption-pay",
+      "question": "Why should government ministers be paid high salaries?",
+      "type": "sourced",
+      "expected_sources": [
+        "corruption-clean-government"
+      ],
+      "retrieved_sources": [
+        "corruption-clean-government",
+        "legacy-and-honour",
+        "foreign-policy-small-states",
+        "asian-values-democracy"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q5-housing",
+      "question": "Why did Singapore push so hard for home ownership?",
+      "type": "sourced",
+      "expected_sources": [
+        "housing-home-ownership"
+      ],
+      "retrieved_sources": [
+        "housing-home-ownership",
+        "legacy-and-honour",
+        "separation-1965",
+        "population-family",
+        "bilingualism-language",
+        "meritocracy-and-talent"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q6-china-rise",
+      "question": "What do you make of China's rise?",
+      "type": "sourced",
+      "expected_sources": [
+        "china-rise"
+      ],
+      "retrieved_sources": [
+        "china-rise",
+        "survival-and-vulnerability",
+        "leadership-and-fear",
+        "population-family",
+        "corruption-clean-government"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q7-meritocracy",
+      "question": "What is Singapore's most important resource?",
+      "type": "sourced",
+      "expected_sources": [
+        "meritocracy-and-talent",
+        "survival-and-vulnerability"
+      ],
+      "retrieved_sources": [
+        "bilingualism-language",
+        "economic-strategy-mnc",
+        "separation-1965",
+        "meritocracy-and-talent",
+        "corruption-clean-government",
+        "population-family"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q8-order-vs-freedom",
+      "question": "What comes first, individual freedom or social order?",
+      "type": "sourced",
+      "expected_sources": [
+        "rule-of-law-order",
+        "asian-values-democracy"
+      ],
+      "retrieved_sources": [
+        "asian-values-democracy",
+        "rule-of-law-order",
+        "foreign-policy-small-states",
+        "population-family",
+        "survival-and-vulnerability"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q9-population",
+      "question": "Can the government engineer how many children people have?",
+      "type": "sourced",
+      "expected_sources": [
+        "population-family"
+      ],
+      "retrieved_sources": [
+        "population-family",
+        "legacy-and-honour",
+        "rule-of-law-order",
+        "separation-1965"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q10-crypto-inference",
+      "question": "What would you think about cryptocurrency and Bitcoin?",
+      "type": "inference",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "rule-of-law-order",
+        "leadership-and-fear",
+        "economic-strategy-mnc",
+        "housing-home-ownership",
+        "corruption-clean-government"
+      ],
+      "retrieval_hit": null
+    }
+  ]
+}

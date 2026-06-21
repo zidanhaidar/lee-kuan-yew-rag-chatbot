@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q1-democracy",
+    "question": "Is democracy necessary for a country to develop?",
+    "expected_sources": ["asian-values-democracy"],
+    "known_position": "LKY argued that discipline matters more than democracy for development, and that systems should not be transplanted uncritically across cultures.",
+    "type": "sourced"
+  },
+  {
+    "id": "q2-leadership-popularity",
+    "question": "How much should a leader care about being popular?",
+    "expected_sources": ["leadership-and-fear"],
+    "known_position": "A leader overly concerned with popularity polls is a weak leader; do what is right for the long term even when unpopular.",
+    "type": "sourced"
+  },
+  {
+    "id": "q3-small-state-foreign-policy",
+    "question": "How should a small country conduct its foreign policy between great powers?",
+    "expected_sources": ["foreign-policy-small-states", "china-rise"],
+    "known_position": "Stay useful to all, avoid taking sides, never become so dependent on one power that you lose freedom of action; no permanent friends, only permanent interests.",
+    "type": "sourced"
+  },
+  {
+    "id": "q4-corruption-pay",
+    "question": "Why should government ministers be paid high salaries?",
+    "expected_sources": ["corruption-clean-government"],
+    "known_position": "Paying leaders well, comparable to the private sector, keeps them clean and attracts able people; underpaying them invites corruption and mediocrity.",
+    "type": "sourced"
+  },
+  {
+    "id": "q5-housing",
+    "question": "Why did Singapore push so hard for home ownership?",
+    "expected_sources": ["housing-home-ownership"],
+    "known_position": "Home ownership gives citizens a stake in the country and stability; a man who owns his home will defend it.",
+    "type": "sourced"
+  },
+  {
+    "id": "q6-china-rise",
+    "question": "What do you make of China's rise?",
+    "expected_sources": ["china-rise"],
+    "known_position": "China's scale forces a new world balance; it wants to be accepted as China, not an honorary Westerner, but faces aging, rule-of-law and institutional challenges.",
+    "type": "sourced"
+  },
+  {
+    "id": "q7-meritocracy",
+    "question": "What is Singapore's most important resource?",
+    "expected_sources": ["meritocracy-and-talent", "survival-and-vulnerability"],
+    "known_position": "With no natural resources, Singapore's only asset is the quality of its people; hence heavy investment in education, meritocracy, and attracting talent.",
+    "type": "sourced"
+  },
+  {
+    "id": "q8-order-vs-freedom",
+    "question": "What comes first, individual freedom or social order?",
+    "expected_sources": ["rule-of-law-order", "asian-values-democracy"],
+    "known_position": "Order and law applied equally come first; freedoms are exercised within a framework of order, and the family/society context tempers pure individualism.",
+    "type": "sourced"
+  },
+  {
+    "id": "q9-population",
+    "question": "Can the government engineer how many children people have?",
+    "expected_sources": ["population-family"],
+    "known_position": "You can build conditions and incentives, but you cannot order people to marry and have children; LKY conceded he pushed too bluntly on this.",
+    "type": "sourced"
+  },
+  {
+    "id": "q10-crypto-inference",
+    "question": "What would you think about cryptocurrency and Bitcoin?",
+    "expected_sources": [],
+    "known_position": "Out of corpus / era. A faithful answer should flag this as an extrapolation of his pragmatic, stability-first, anti-speculation reasoning rather than a documented view.",
+    "type": "inference"
+  }
+]

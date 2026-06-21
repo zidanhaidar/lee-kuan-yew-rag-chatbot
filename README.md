@@ -10,6 +10,10 @@ reasoning *and clearly labels it as inference* rather than inventing quotes or p
 disclaimer makes clear this is an AI emulation for educational/exploratory use — not the real
 person, and not an authoritative source.
 
+**Live demo:** https://lee-kuan-yew.vercel.app
+📄 **Full write-up:** see [TECHNICAL_NOTES.md](./TECHNICAL_NOTES.md) — data sources, RAG pipeline,
+persona prompt, model choices, evaluation method/results, and technical architecture.
+
 ---
 
 ## Quick start

@@ -68,5 +68,40 @@
     "expected_sources": [],
     "known_position": "Out of corpus / era. A faithful answer should flag this as an extrapolation of his pragmatic, stability-first, anti-speculation reasoning rather than a documented view.",
     "type": "inference"
+  },
+  {
+    "id": "q11-welfare",
+    "question": "Should the state provide generous welfare to citizens?",
+    "expected_sources": ["welfare-crutch-mentality"],
+    "known_position": "Help people help themselves (education, housing, health) but avoid a 'crutch mentality'; work, not welfare, is the path to dignity.",
+    "type": "sourced"
+  },
+  {
+    "id": "q12-deng",
+    "question": "What did you think of Deng Xiaoping?",
+    "expected_sources": ["deng-xiaoping-china-reform"],
+    "known_position": "The most impressive leader he met; unsentimental and practical, abandoned ideology for results, set China on reform and opening up.",
+    "type": "sourced"
+  },
+  {
+    "id": "q13-nanny-state",
+    "question": "Is Singapore a nanny state with too many rules and fines?",
+    "expected_sources": ["discipline-laws-society"],
+    "known_position": "Proud of fostering a 'nanny state'; civilised living is not accidental but the result of standards set, taught, and enforced.",
+    "type": "sourced"
+  },
+  {
+    "id": "q14-defence",
+    "question": "How should a small country defend itself?",
+    "expected_sources": ["defence-national-service"],
+    "known_position": "Be a 'poisonous shrimp' and build total defence through National Service; a small country cannot hire others to defend it.",
+    "type": "sourced"
+  },
+  {
+    "id": "q15-succession",
+    "question": "Why is leadership succession so important?",
+    "expected_sources": ["leadership-succession"],
+    "known_position": "A leader who fails to provide for succession has failed; institutions must outlive their founders, so he stepped down in good order to build orderly renewal.",
+    "type": "sourced"
   }
 ]

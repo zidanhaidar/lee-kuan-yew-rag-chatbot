@@ -13,10 +13,11 @@
       ],
       "retrieved_sources": [
         "asian-values-democracy",
+        "garden-city-environment",
+        "defence-national-service",
         "housing-home-ownership",
-        "china-rise",
-        "meritocracy-and-talent",
-        "separation-1965"
+        "india-potential",
+        "china-rise"
       ],
       "retrieval_hit": true
     },
@@ -29,10 +30,11 @@
       ],
       "retrieved_sources": [
         "leadership-and-fear",
+        "deng-xiaoping-china-reform",
+        "garden-city-environment",
         "population-family",
-        "corruption-clean-government",
-        "china-rise",
-        "rule-of-law-order"
+        "leadership-succession",
+        "corruption-clean-government"
       ],
       "retrieval_hit": true
     },
@@ -46,11 +48,11 @@
       ],
       "retrieved_sources": [
         "china-rise",
+        "defence-national-service",
+        "garden-city-environment",
         "housing-home-ownership",
-        "foreign-policy-small-states",
-        "united-states",
-        "economic-strategy-mnc",
-        "separation-1965"
+        "race-religion-harmony",
+        "foreign-policy-small-states"
       ],
       "retrieval_hit": true
     },
@@ -63,9 +65,10 @@
       ],
       "retrieved_sources": [
         "corruption-clean-government",
+        "leadership-succession",
         "legacy-and-honour",
-        "foreign-policy-small-states",
-        "asian-values-democracy"
+        "race-religion-harmony",
+        "foreign-policy-small-states"
       ],
       "retrieval_hit": true
     },
@@ -80,9 +83,9 @@
         "housing-home-ownership",
         "legacy-and-honour",
         "separation-1965",
-        "population-family",
-        "bilingualism-language",
-        "meritocracy-and-talent"
+        "press-and-media",
+        "leadership-succession",
+        "defence-national-service"
       ],
       "retrieval_hit": true
     },
@@ -95,10 +98,10 @@
       ],
       "retrieved_sources": [
         "china-rise",
+        "press-and-media",
         "survival-and-vulnerability",
-        "leadership-and-fear",
-        "population-family",
-        "corruption-clean-government"
+        "western-liberalism-human-rights",
+        "mortality-and-marriage"
       ],
       "retrieval_hit": true
     },
@@ -116,7 +119,7 @@
         "separation-1965",
         "meritocracy-and-talent",
         "corruption-clean-government",
-        "population-family"
+        "leadership-succession"
       ],
       "retrieval_hit": true
     },
@@ -130,10 +133,8 @@
       ],
       "retrieved_sources": [
         "asian-values-democracy",
-        "rule-of-law-order",
-        "foreign-policy-small-states",
-        "population-family",
-        "survival-and-vulnerability"
+        "western-liberalism-human-rights",
+        "press-and-media"
       ],
       "retrieval_hit": true
     },
@@ -158,13 +159,95 @@
       "type": "inference",
       "expected_sources": [],
       "retrieved_sources": [
+        "defence-national-service",
         "rule-of-law-order",
-        "leadership-and-fear",
-        "economic-strategy-mnc",
-        "housing-home-ownership",
-        "corruption-clean-government"
+        "leadership-succession",
+        "western-liberalism-human-rights",
+        "leadership-and-fear"
       ],
       "retrieval_hit": null
+    },
+    {
+      "id": "q11-welfare",
+      "question": "Should the state provide generous welfare to citizens?",
+      "type": "sourced",
+      "expected_sources": [
+        "welfare-crutch-mentality"
+      ],
+      "retrieved_sources": [
+        "welfare-crutch-mentality",
+        "housing-home-ownership",
+        "corruption-clean-government",
+        "population-family",
+        "defence-national-service",
+        "economic-strategy-mnc"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q12-deng",
+      "question": "What did you think of Deng Xiaoping?",
+      "type": "sourced",
+      "expected_sources": [
+        "deng-xiaoping-china-reform"
+      ],
+      "retrieved_sources": [
+        "deng-xiaoping-china-reform",
+        "leadership-and-fear",
+        "legacy-and-honour",
+        "china-rise",
+        "rule-of-law-order",
+        "discipline-laws-society"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q13-nanny-state",
+      "question": "Is Singapore a nanny state with too many rules and fines?",
+      "type": "sourced",
+      "expected_sources": [
+        "discipline-laws-society"
+      ],
+      "retrieved_sources": [
+        "discipline-laws-society",
+        "corruption-clean-government",
+        "economic-strategy-mnc",
+        "defence-national-service",
+        "leadership-succession"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q14-defence",
+      "question": "How should a small country defend itself?",
+      "type": "sourced",
+      "expected_sources": [
+        "defence-national-service"
+      ],
+      "retrieved_sources": [
+        "defence-national-service",
+        "foreign-policy-small-states",
+        "china-rise",
+        "housing-home-ownership",
+        "race-religion-harmony"
+      ],
+      "retrieval_hit": true
+    },
+    {
+      "id": "q15-succession",
+      "question": "Why is leadership succession so important?",
+      "type": "sourced",
+      "expected_sources": [
+        "leadership-succession"
+      ],
+      "retrieved_sources": [
+        "leadership-succession",
+        "corruption-clean-government",
+        "bilingualism-language",
+        "garden-city-environment",
+        "asian-values-democracy"
+      ],
+      "retrieval_hit": true
     }
   ]
 }

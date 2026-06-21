@@ -78,9 +78,12 @@ Useful scripts:
 The knowledge base in `data/corpus/` is a **curated set of genuine, widely-published LKY material**,
 each file carrying a citation in its frontmatter (`work`, `year`, `type`, `source`, `url`). Themes
 covered: nationhood & separation (1965), leadership & power, survival/vulnerability, meritocracy,
-clean government, democracy & "Asian values", the rise of China, the United States, bilingualism,
-home ownership, rule of law, foreign policy of small states, population policy, economic strategy,
-and legacy.
+clean government, democracy & "Asian values", the rise of China, the United States, India,
+bilingualism, home ownership, rule of law, foreign policy of small states, population policy,
+economic strategy, legacy, welfare & self-reliance, defence & National Service, the press,
+Western liberalism & human rights, mortality & marriage, social-discipline laws, Deng Xiaoping &
+China's reform, the Garden City & environment, globalisation, leadership succession, and race &
+religious harmony.
 
 Sources drawn upon:
 
@@ -104,8 +107,8 @@ Sources drawn upon:
 Paragraph-aware chunking with character overlap (`lib/chunk.ts`): split on blank lines, greedily
 pack paragraphs to ~`CHUNK_SIZE` (default **900** chars), carry a ~`CHUNK_OVERLAP` (default **150**
 chars) tail into the next chunk so passages spanning a boundary stay retrievable; over-long
-paragraphs are hard-split. Each chunk inherits its source's citation. Current corpus → **28 chunks
-from 15 documents**.
+paragraphs are hard-split. Each chunk inherits its source's citation. Current corpus → **53 chunks
+from 27 documents**.
 
 ### Embeddings (two interchangeable backends)
 
@@ -149,12 +152,12 @@ title, work/year, similarity score, snippet, and full citation.
 ### Evaluation
 
 `eval/questions.json` is a small eval set of questions with known LKY positions and expected source
-documents (9 in-corpus + 1 deliberately out-of-corpus "crypto" question that *should* trigger
+documents (14 in-corpus + 1 deliberately out-of-corpus "crypto" question that *should* trigger
 flagged inference). `npm run eval`:
 
 - **Retrieval metric (always):** recall@k — did at least one expected source appear in the top-k?
   **Current result with the offline local embedder: `retrieval_recall_at_k = 1.0`** across the
-  9 sourced questions.
+  14 sourced questions.
 - **Generation metrics (when a key is set):** an **LLM-as-judge** rubric scores each answer 1–5 on
   *faithfulness*, *persona consistency*, *refusal-to-fabricate*, *relevance*, and *consistency with
   the known position*, plus a citation-presence check. Results are written to `eval/results.json`.
